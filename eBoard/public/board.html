@@ -1,0 +1,42 @@
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>전자칠판</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/board.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	
+</head>
+<body>
+
+<canvas id = 'cv' width='860px;' height='645px;'></canvas>
+<!-- map 영역 -->
+<div id="map" style="position:absolute;top:100;left:100;width:600px;height:400px;display:none;"></div> 
+<!-- roadview -->
+<div id="roadview" style="position:absolute;top:100;left:100;width:600px;height:400px;display:none;"></div>
+
+<div class = "menu">
+	<button id = 'clear'>
+		clear
+	</button>
+	<fieldset>
+		<legend>색상변경</legend>
+		<select id = 'pen_color'>
+		</select>
+	</fieldset>
+ 	 
+	<fieldset>
+		<legend>펜 두께</legend>
+   		<select id = 'pen_width'>
+		</select>
+ 	</fieldset>
+ 	 
+	<fieldset id = 'pen_shape'>
+		<legend>펜 모양</legend>
+ 	</fieldset>
+</div>
+
+</body>
+</html>
